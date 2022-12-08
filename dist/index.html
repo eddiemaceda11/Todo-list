@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+    </style>
+    <script
+      src="https://kit.fontawesome.com/19b74804ae.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Todo List</title>
+  </head>
+
+  <body class="body" id="body">
+    <div class="container" id="container">
+      <section class="header" id="header">
+        <div class="site-name" id="site-name">To-do</div>
+        <i class="fa-regular fa-clipboard"></i>
+      </section>
+
+      <section class="main-left" id="main-left">
+        <div class="main-left-container" id="main-left-container">
+          <ul class="home-section" id="home-section">
+            Home
+            <div class="home-sub-div">
+              <i class="fa-solid fa-folder-open"></i>
+              <li class="all-tasks" id="all-tasks">All Tasks</li>
+            </div>
+            <div class="home-sub-div">
+              <i class="fa-sharp fa-solid fa-calendar-day"></i>
+              <li class="today" id="today">Today</li>
+            </div>
+            <div class="home-sub-div">
+              <i class="fa-sharp fa-solid fa-calendar-week"></i>
+              <li class="week" id="week">Week</li>
+            </div>
+          </ul>
+          <ul class="project-section" id="project-section">
+            Projects
+            <ul class="added-project-cont">
+              <div class="added-project-div">
+                <i class="fa-solid fa-list-check"></i>
+                <li class="added-project">Study for Science Exam</li>
+              </div>
+              <div class="added-project-div">
+                <i class="fa-solid fa-list-check"></i>
+                <li class="added-project">Plan trip to NY</li>
+              </div>
+            </ul>
+            <div class="project-sub-div">
+              <i class="fa-solid fa-plus left"></i>
+              <li class="add-project" id="add-project">Add Project</li>
+            </div>
+          </ul>
+        </div>
+      </section>
+
+      <section class="main-right" id="main-right">
+        <div class="main-right-container" id="main-right-container">
+          <ul class="all-tasks-main-display">
+            All Tasks
+            <div class="right-sub-div">
+              <i class="fa-solid fa-plus right"></i>
+              <li class="right-sect-add-tasks">Add Task</li>
+            </div>
+
+            <div class="added-task-div">
+              <div class="added-task-left">
+                <input id="task-checkbox" type="checkbox" />
+                <li class="right-sect-add-tasks">Buy Groceries</li>
+              </div>
+              <div class="added-task-right">
+                <i class="fa-solid fa-square-check"></i>
+                <i class="fa-sharp fa-solid fa-trash"></i>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <section class="task-popup" id="task-popup">
+      <div class="task-form-container">
+        <div class="form-header" id="form-header">
+          <div class="form-header-create" id="form-header-create">
+            Create a new...
+          </div>
+          <p class="exit-btn" id="exit-btn">x</p>
+        </div>
+        <form class="task-popup-form" id="task-popup-form" action="">
+          <label for="task-name" id="task-name">Task</label>
+          <textarea
+            type="text"
+            class="form-text-input"
+            id="task-name"
+          ></textarea>
+          <div class="priorities">
+            <div class="priority low">Low</div>
+            <div class="priority medium">Medium</div>
+            <div class="priority high">High</div>
+          </div>
+          <p class="calender">calender</p>
+          <div class="task-form-btns">
+            <input type="button" class="task-form-btn add" value="Add" />
+            <input type="button" class="task-form-btn cancel" value="Cancel" />
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

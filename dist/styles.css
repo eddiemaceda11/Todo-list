@@ -1,0 +1,396 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: "PT Serif", serif;
+}
+
+.body {
+  position: relative;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.container {
+  min-width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 3fr;
+  grid-template-rows: 1fr 9fr;
+}
+
+.header {
+  display: flex;
+
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  background: rgba(4, 50, 78, 1);
+  border-bottom: 1px solid rgb(221, 215, 215);
+
+  padding-left: 4rem;
+  font-size: 2.9rem;
+  font-family: "PT Serif", serif;
+
+  font-weight: 500;
+  text-transform: uppercase;
+
+  color: #fff;
+  align-items: center;
+}
+
+.fa-clipboard {
+  margin-left: 1.2rem;
+  font-size: 3rem;
+}
+
+.fa-folder-open {
+  font-size: 21px;
+  padding-right: 11px;
+}
+
+.fa-sharp {
+  font-size: 22px;
+  padding-right: 14px;
+}
+
+.fa-plus.left,
+.fa-plus.right {
+  font-size: 22px;
+  padding-right: 14px;
+}
+
+.fa-square-check {
+  font-size: 19px;
+}
+
+.fa-trash {
+  font-size: 17px;
+}
+
+.fa-trash:hover,
+.fa-square-check:hover {
+  color: rgb(12, 135, 211);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.fa-trash:active,
+.fa-square-check:active {
+  transform: scale(1);
+}
+
+.home-section,
+.project-section,
+.all-tasks-main-display {
+  font-family: "PT Serif", serif;
+  font-size: 34px;
+  font-weight: bold;
+  color: rgb(4, 50, 78);
+}
+
+.all-tasks,
+.today,
+.week,
+.add-project,
+.added-project-cont {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.main-left {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  background: rgb(244, 243, 243);
+  border-right: 1.4px solid rgb(221, 215, 215);
+}
+
+.main-left-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-left: 3rem;
+
+  gap: 24px;
+}
+
+.home-sub-div {
+  display: flex;
+  align-items: center;
+
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  margin-left: 16px;
+  margin-right: 16px;
+
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 8px;
+  cursor: pointer;
+}
+
+.home-sub-div:hover {
+  background: rgb(219, 219, 219);
+  border-radius: 4px;
+}
+
+.project-sub-div {
+  display: flex;
+  align-items: center;
+
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  margin-left: 15px;
+  margin-right: 16px;
+
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 8px;
+  cursor: pointer;
+}
+
+.project-sub-div:hover {
+  background: rgb(219, 219, 219);
+  border-radius: 4px;
+}
+
+.added-project-cont {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  margin-left: 1px;
+  margin-right: 16px;
+
+  /* padding-top: 0.8rem;
+  padding-bottom: 0.8rem; */
+  /* padding-left: 8px; */
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.added-project-div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.added-project {
+  /* padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 0.4rem; */
+}
+
+.added-project-div:hover {
+  background: rgb(219, 219, 219);
+  border-radius: 4px;
+}
+
+.main-right {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.right-sect-add-tasks {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.right-sub-div {
+  display: flex;
+  align-items: center;
+
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  margin-left: 15px;
+  margin-right: 16px;
+
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 8px;
+  cursor: pointer;
+}
+
+.added-task-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgb(240, 239, 239);
+
+  border-radius: 4px;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  margin-left: 4rem;
+  margin-right: 5rem;
+
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 8px;
+}
+
+.added-task-left,
+.added-task-right {
+  display: flex;
+}
+
+.added-task-right {
+  align-items: center;
+  gap: 14px;
+}
+
+.right-sub-div:hover {
+  background: rgb(219, 219, 219);
+  border-radius: 4px;
+}
+
+.added-task-div:hover {
+  background: rgb(219, 219, 219);
+  border-radius: 4px;
+}
+
+.all-tasks-main-display {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.task-form-container {
+  position: fixed;
+  left: 50%;
+  translate: -50% -50%;
+  width: 36rem;
+  height: 28rem;
+  background: rgba(221, 215, 215, 1);
+  top: 50%;
+  border-radius: 4px;
+  box-shadow: 0px 1px 6px rgba(4, 50, 78, 1);
+
+  display: none;
+}
+
+#task-checkbox {
+  margin-left: 2px;
+  margin-right: 14px;
+}
+
+.task-popup-form {
+  min-height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: rgba(4, 50, 78, 1);
+  font-size: 24px;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: flex-end;
+  background: rgba(4, 50, 78, 1);
+  color: #fff;
+  font-size: 1.5rem;
+  width: 100%;
+
+  padding: 8px 8px 6px 8px;
+
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  box-shadow: 0px 0px 3px rgba(4, 50, 78, 1);
+}
+
+.form-text-input {
+  width: 80%;
+  height: 8rem;
+  outline: none;
+  resize: none;
+  font-size: 18px;
+  padding: 4px 5px;
+  border: none;
+  box-shadow: 0px 0px 2px rgba(4, 50, 78, 1);
+}
+
+.priorities {
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+}
+
+.priority {
+  background: #fff;
+  font-size: 18px;
+  padding: 2px 16px;
+  border-radius: 4px;
+}
+
+.priority:hover {
+  cursor: pointer;
+}
+
+.priority.low {
+  border: solid 1px green;
+  color: green;
+}
+
+.priority.low:hover {
+  border: solid 1px green;
+  color: #fff;
+  background: green;
+}
+
+.priority.medium {
+  border: solid 1px #dbb249;
+  color: #dbb249;
+}
+
+.priority.medium:hover {
+  border: solid 1px #dbb249;
+  color: #fff;
+  background: #dbb249;
+}
+
+.priority.high {
+  border: solid 1px red;
+  color: red;
+}
+
+.priority.high:hover {
+  border: solid 1px red;
+  color: #fff;
+  background: red;
+}
+
+.task-form-btns {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  height: 2.5rem;
+
+  /* background: black; */
+  margin-bottom: 1rem;
+}
+
+.task-form-btn {
+  border: 1px solid rgb(161, 162, 163);
+  border-radius: 4px;
+
+  font-weight: 600;
+  font-size: 18px;
+  width: 48%;
+
+  box-shadow: 0px 0px 2px rgb(201, 204, 207);
+}
+
+.task-form-btn.add {
+  background: rgba(152, 255, 152);
+}
+
+.task-form-btn.cancel {
+  background: rgb(253, 159, 140);
+}
